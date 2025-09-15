@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Super Troca de Óleo Bizo | Sua troca de óleo rápida e segura</title>
+    <meta
+      name="description"
+      content="Super Troca de Óleo Bizo — troca de óleo rápida, filtros e check-up. Atendimento ágil, preço justo e garantia de procedência."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Mobile menu toggle
+      function toggleMenu() {
+        const drawer = document.querySelector(".drawer");
+        drawer.classList.toggle("open");
+      }
+      // Simple form handler (no backend)
+      function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.nome.value.trim();
+        const phone = form.telefone.value.trim();
+        if (!name || !phone) {
+          alert("Por favor, preencha nome e telefone.");
+          return;
+        }
+        const msg = `Olá, sou ${name}. Quero agendar uma troca de óleo. Telefone: ${phone}.`;
+        const encoded = encodeURIComponent(msg);
+        // WhatsApp fallback para número do banner
+        window.open("https://wa.me/5517997084484?text=" + encoded, "_blank");
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutomotiveBusiness",
+        "name": "Super Troca de Óleo Bizo",
+        "image": "",
+        "telephone": "+55 17 99708-4484",
+        "url": "",
+        "priceRange": "$$",
+        "areaServed": "Brasil",
+        "description": "Troca de óleo rápida, filtros e check-up com garantia.",
+        "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-12:00"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrap nav">
+        <a href="#inicio" class="brand" aria-label="Super Troca de Óleo Bizo">
+          <div class="brand-logo" aria-hidden="true">
+            <img src="src/util/logo.jpg" alt="Super Troca de Óleo Bizo" />
+          </div>
+
+          <div>
+            <h1>
+              Super Troca de Óleo <span style="color: var(--red)">Bizo</span>
+            </h1>
+            <small>Troca de óleo é com quem entende</small>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="principal">
+          <a href="#servicos">Serviços</a>
+          <a href="#precos">Preços</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
+          <a class="cta" href="tel:+5517997084484" aria-label="Ligar agora">
+            <!-- phone icon -->
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.6 10.8a15.8 15.8 0 006.6 6.6l2.2-2.2a1.2 1.2 0 011.2-.3c1.3.4 2.7.7 4.1.7a1.2 1.2 0 011.2 1.2V20a2 2 0 01-2 2C10.8 22 2 13.2 2 2a2 2 0 012-2h3.3a1.2 1.2 0 011.2 1.2c0 1.4.2 2.8.7 4.1.1.4 0 .8-.3 1.2L6.6 10.8z"
+                fill="currentColor"
+              />
+            </svg>
+            Ligar agora
+          </a>
+        </nav>
+        <button class="burger" aria-label="Abrir menu" onclick="toggleMenu()">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Drawer mobile -->
+    <div class="drawer" onclick="toggleMenu()">
+      <div class="drawer-panel" onclick="event.stopPropagation()">
+        <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+        <a href="#precos" onclick="toggleMenu()">Preços</a>
+        <a href="#avaliacoes" onclick="toggleMenu()">Avaliações</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="#contato" onclick="toggleMenu()">Contato</a>
+        <a class="cta" href="tel:+5517997084484">Ligar agora</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">
+            <!-- oil drop -->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2s7 7.3 7 12a7 7 0 11-14 0C5 9.3 12 2 12 2z"
+                fill="var(--red)"
+              />
+              <path
+                d="M9.5 15.5c1.2.8 2.7.7 3.9 0"
+                stroke="#fff"
+                stroke-opacity=".9"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+            Atendimento ágil • Garantia de procedência
+          </span>
+          <h2>
+            Troca de óleo <span style="color: var(--red)">rápida</span>, segura
+            e sem dor de cabeça
+          </h2>
+          <p>
+            Na <strong>Super Troca de Óleo Bizo</strong> você faz a manutenção
+            do seu carro com quem realmente entende: óleo certo para o seu
+            motor, filtros de qualidade e check‑up gratuito em minutos.
+          </p>
+          <div class="actions">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5517997084484?text=Olá!%20Quero%20agendar%20uma%20troca%20de%20óleo"
+              target="_blank"
+              rel="noopener"
+              >Agendar no WhatsApp</a
+            >
+            <a class="btn" href="#precos">Ver preços</a>
+          </div>
+          <div class="trust">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 7l-9 9-5-5"
+                stroke="#9EE37D"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Garantia de 90 dias • Peças e lubrificantes de marcas reconhecidas
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3 style="margin-top: 0">
+            Pronto em até <span style="color: var(--red)">30 minutos</span>
+          </h3>
+          <p class="lead">
+            Enquanto cuidamos do seu carro, você acompanha tudo de perto.
+            Transparência total.
+          </p>
+          <div class="brands" aria-label="marcas">
+            <span>Shell</span><span>Mobil</span><span>Petronas</span
+            ><span>Castrol</span><span>Honda</span><span>GM</span>
+          </div>
+          <div class="band">
+            <strong>📞 (17) 99708‑4484</strong>
+            <div class="actions">
+              <a class="btn btn-primary" href="tel:+5517997084484">Ligar</a>
+              <a class="btn" href="#contato">Solicitar orçamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="highlights">
+      <div class="wrap grid-3">
+        <div class="card">
+          <div class="icon">⏱️</div>
+          <h3>Rápido e no capricho</h3>
+          <p>
+            Processo otimizado para você voltar à rotina sem atraso, com padrão
+            de qualidade.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">🛡️</div>
+          <h3>Garantia e procedência</h3>
+          <p>
+            Lubrificantes e filtros originais ou homologados para proteger o seu
+            motor.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">💳</div>
+          <h3>Preço justo</h3>
+          <p>
+            Transparência desde o orçamento. Parcelamento e diversas formas de
+            pagamento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicos" class="section">
+      <div class="wrap">
+        <h2>Serviços</h2>
+        <p class="lead">Tudo para manter seu carro em dia — em um só lugar.</p>
+        <div class="services">
+          <div class="card service">
+            <span class="badge">Mais pedido</span>
+            <h3>Troca de óleo completa</h3>
+            <p>
+              Lubrificante correto para o seu veículo + mão de obra + check‑up
+              gratuito.
+            </p>
+          </div>
+          <div class="card service">
+            <h3>Troca de filtro</h3>
+            <p>
+              Filtro de óleo e de ar, com marcas de confiança e aplicação
+              correta no seu modelo.
+            </p>
+          </div>
+          <div class="card service">
+            <h3>Check‑up de 15 itens</h3>
+            <p>
+              Inspeção rápida: nível de fluídos, correias, arrefecimento, freios
+              e mais.
+            </p>
+          </div>
+          <div class="card service">
+            <h3>Flush e limpeza</h3>
+            <p>
+              Serviço opcional para motores com borra, seguindo recomendações
+              técnicas.
+            </p>
+          </div>
+          <div class="card service">
+            <h3>Troca de óleo de câmbio</h3>
+            <p>
+              Manual e automático (quando aplicável), com especificação do
+              fabricante.
+            </p>
+          </div>
+          <div class="card service">
+            <h3>Higienização de ar</h3>
+            <p>
+              Ajuda a reduzir odores e melhora a qualidade do ar dentro do
+              veículo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="precos" class="section" aria-labelledby="h-precos">
+      <div class="wrap">
+        <h2 id="h-precos">Preços</h2>
+        <p class="lead">
+          Valores de referência — consulte para confirmar seu modelo (mão de
+          obra inclusa).
+        </p>
+        <div class="pricing">
+          <article class="price">
+            <div class="tag">Semissintético 10W‑40</div>
+            <div class="value">R$ 169 <small>/ a partir</small></div>
+            <ul>
+              <li>✔️ Até 4 litros</li>
+              <li>✔️ Filtro padrão incluído*</li>
+              <li>✔️ Check‑up 15 itens</li>
+            </ul>
+            <div class="actions" style="margin-top: 14px">
+              <a class="btn btn-primary" href="#contato">Quero esse</a>
+            </div>
+          </article>
+          <article class="price" style="border-color: rgba(225, 29, 42, 0.4)">
+            <div class="tag">Sintético 5W‑30 / 5W‑40</div>
+            <div class="value">R$ 229 <small>/ a partir</small></div>
+            <ul>
+              <li>✔️ Até 4 litros</li>
+              <li>✔️ Filtro premium*</li>
+              <li>✔️ Validação por placa</li>
+            </ul>
+            <div class="actions" style="margin-top: 14px">
+              <a class="btn btn-primary" href="#contato">Quero esse</a>
+            </div>
+          </article>
+          <article class="price">
+            <div class="tag">Diesel / Utilitários</div>
+            <div class="value">R$ 289 <small>/ a partir</small></div>
+            <ul>
+              <li>✔️ Volume conforme o manual</li>
+              <li>✔️ Filtro compatível*</li>
+              <li>✔️ Check‑up completo</li>
+            </ul>
+            <div class="actions" style="margin-top: 14px">
+              <a class="btn btn-primary" href="#contato">Quero esse</a>
+            </div>
+          </article>
+        </div>
+        <p style="color: #99a1ac; margin-top: 10px">
+          *Marcas e modelos variam conforme disponibilidade e aplicação.
+          Solicite orçamento confirmando a placa.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="avaliacoes" class="section">
+      <div class="wrap">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="testimonials">
+          <div class="quote">
+            <p>
+              “Atendimento muito rápido, explicaram tudo e saí com o carro
+              revisado. Recomendo!”
+            </p>
+            <footer>— Mariana S.</footer>
+          </div>
+          <div class="quote">
+            <p>
+              “Preço justo e transparência. Mostraram o óleo e o filtro antes de
+              aplicar.”
+            </p>
+            <footer>— João P.</footer>
+          </div>
+          <div class="quote">
+            <p>“Agendei pelo Whats e em 25 minutos estava pronto. Top!”</p>
+            <footer>— Carlos A.</footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap">
+        <h2>Dúvidas frequentes</h2>
+        <details>
+          <summary>Qual o intervalo ideal para troca de óleo?</summary>
+          <p>
+            Depende do lubrificante e do seu veículo. Em geral, entre 5.000 e
+            10.000 km ou 6 meses. Validamos pela placa no manual técnico.
+          </p>
+        </details>
+        <details>
+          <summary>Posso levar meu próprio óleo?</summary>
+          <p>
+            Pode. Apenas verifique se atende às especificações do fabricante. A
+            mão de obra é orçada à parte.
+          </p>
+        </details>
+        <details>
+          <summary>Vocês fazem check‑up gratuito?</summary>
+          <p>
+            Sim. Conferimos níveis, arrefecimento, correias, lâmpadas e
+            calibragem como cortesia durante a troca.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contato" class="section">
+      <div class="wrap">
+        <h2>Solicite seu orçamento</h2>
+        <p class="lead">Responda rapidinho e retornamos pelo WhatsApp.</p>
+        <form onsubmit="handleSubmit(event)">
+          <div>
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" placeholder="Seu nome" required />
+          </div>
+          <div>
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input
+              id="telefone"
+              name="telefone"
+              placeholder="(17) 9 9708‑4484"
+              required
+            />
+          </div>
+          <div class="full">
+            <label for="placa">Placa do veículo</label>
+            <input id="placa" name="placa" placeholder="ABC1D23" />
+          </div>
+          <div>
+            <label for="servico">Serviço</label>
+            <select id="servico" name="servico">
+              <option>Troca de óleo</option>
+              <option>Troca de filtro</option>
+              <option>Check‑up</option>
+              <option>Óleo de câmbio</option>
+            </select>
+          </div>
+          <div>
+            <label for="quando">Quando deseja?</label>
+            <input id="quando" name="quando" type="date" />
+          </div>
+          <div class="full">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Conte rapidamente o que precisa"
+            ></textarea>
+          </div>
+          <div class="full actions" style="margin-top: 6px">
+            <button class="btn btn-primary" type="submit">
+              Pedir orçamento no WhatsApp
+            </button>
+            <a class="btn" href="tel:+5517997084484">Ou ligar agora</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrap footgrid">
+        <div>
+          <strong>Super Troca de Óleo Bizo</strong>
+          <div class="copy">
+            © <span id="y"></span> Bizo. Todos os direitos reservados.
+          </div>
+        </div>
+        <div>
+          <div>
+            WhatsApp:
+            <a href="https://wa.me/5517997084484" target="_blank" rel="noopener"
+              >(17) 99708‑4484</a
+            >
+          </div>
+          <div style="margin-top: 8px">
+            Atendimento: Seg‑Sex 08:00–18:00 • Sáb 08:00–12:00
+          </div>
+        </div>
+      </div>
+      <script>
+        document.getElementById("y").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
